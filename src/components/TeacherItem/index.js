@@ -1,10 +1,11 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 import whatsapIcon from '../../assets/images/icons/whatsapp.svg'
 
 import './styles.css'
 
-const TeacherItem = () => {
+const TeacherItem = ({ teachers }) => {
   return (
     <article className="teacher-item">
       <header>
@@ -13,19 +14,19 @@ const TeacherItem = () => {
           alt=""
         />
         <div>
-          <strong>teacher.name</strong>
-          <span>teacher.subject</span>
+          <strong>{teachers.name}</strong>
+          <span>teachers.languages</span>
         </div>
       </header>
-      <p>teacher.bio</p>
+      <p>{teachers.technologies}</p>
       <footer>
         <p>
-          Prix/heure<strong>teacher.cost fr</strong>
+          Prix/heure<strong>{teachers.cost} fr</strong>
         </p>
-        <a target="blank">
+        <Link to="blank">
           <img src={whatsapIcon} alt="whatsapp" />
           Contacter
-        </a>
+        </Link>
       </footer>
     </article>
   )

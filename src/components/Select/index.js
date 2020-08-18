@@ -8,7 +8,9 @@ function Select({ label, name, options, ...rest }) {
       <label htmlFor={name}>{label}</label>
       <select id={name} {...rest}>
         {options.map(option => (
-          <option key={option.value}>{option.label}</option>
+          <option key={option.value} value={option.value}>
+            {option.label}
+          </option>
         ))}
       </select>
     </div>

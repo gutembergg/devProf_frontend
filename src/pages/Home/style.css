@@ -47,6 +47,14 @@
   color: var(--color-button-text);
 }
 
+#btnEtudier:hover {
+  background: var(--color-primary-light);
+}
+
+#btnDonner:hover {
+  background: var(--color-secundary-dark);
+}
+
 @media (min-width: 700px) {
   .sub-title {
     margin-left: 10px;

@@ -1,23 +1,50 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 import PageHeaders from '../../components/PageHeaders'
 import Select from '../../components/Select'
 import Input from '../../components/Input'
 import TeacherItem from '../../components/TeacherItem'
+import api from '../../services/api'
 
 import './styles.css'
 
 function TeacherList(props) {
+  const [searchTeachers, setSearchTeachers] = useState()
+  const [languages, setLanguages] = useState('')
+  const [week_day, setWeek_day] = useState('')
+  const [time, setTime] = useState('')
+
+  async function searchTeacher(e) {
+    e.preventDefault()
+
+    try {
+      const response = await api.get('/users', {
+        params: {
+          languages,
+          week_day,
+          time
+        }
+      })
+      setSearchTeachers(response.data)
+    } catch (error) {
+      console.log(error.response.data.error)
+    }
+  }
+
+  console.log(week_day)
+
   return (
     <>
       <div id="page-teacher-list">
         <PageHeaders title="Voici les Devs disponibles.">
-          <form id="search-teacher">
+          <form onSubmit={searchTeacher} id="search-teacher">
             <div className="row">
               <div className="col-md-3">
                 <Select
                   name="subject"
                   label="Langages"
+                  value={languages}
+                  onChange={e => setLanguages(e.target.value)}
                   options={[
                     { value: 'PHP', label: 'PHP' },
                     { value: 'Java', label: 'Java' },
@@ -33,6 +60,8 @@ function TeacherList(props) {
                 <Select
                   name="week_day"
                   label="Jour de la semaine"
+                  value={week_day}
+                  onChange={e => setWeek_day(e.target.value)}
                   options={[
                     { value: '0', label: 'Dimanche' },
                     { value: '1', label: 'Lundi' },
@@ -46,7 +75,13 @@ function TeacherList(props) {
               </div>
 
               <div className="col-md-3">
-                <Input type="time" name="time" label="Horaire" />
+                <Input
+                  type="time"
+                  name="time"
+                  label="Horaire"
+                  value={time}
+                  onChange={e => setTime(e.target.value)}
+                />
               </div>
 
               <div className="col-md-3">
@@ -59,12 +94,14 @@ function TeacherList(props) {
       </div>
 
       <div className="container">
-        <div className="d-flex justify-content-center">
-          <TeacherItem />
-        </div>
-        <div className="d-flex justify-content-center">
-          <TeacherItem />
-        </div>
+        {searchTeachers &&
+          searchTeachers.map(teacher => {
+            return (
+              <div key={teacher.id} className="d-flex justify-content-center">
+                <TeacherItem teachers={teacher} />
+              </div>
+            )
+          })}
       </div>
     </>
   )
