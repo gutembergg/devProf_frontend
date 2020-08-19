@@ -57,3 +57,8 @@ button {
     font-size: 62.5%;
   }
 }
+
+::placeholder {
+  color: #d3d3d3;
+  opacity: 1;
+}

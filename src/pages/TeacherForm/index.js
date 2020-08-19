@@ -80,6 +80,7 @@ function TeacherFrom() {
           <fieldset>
             <legend>Entrez vous données</legend>
             <Input
+              placeholderName=""
               name="name"
               label="Name"
               value={name}
@@ -87,6 +88,7 @@ function TeacherFrom() {
               required
             />
             <Input
+              placeholderName="ex: https://avatars3.githubusercontent.com/u/46713843..."
               name="avatar"
               label="Avatar"
               value={avatar}
@@ -94,6 +96,7 @@ function TeacherFrom() {
               required
             />
             <Input
+              placeholderName="ex: 41712345678"
               name="whatsapp"
               label="Whatsapp"
               value={whatsapp}
@@ -116,6 +119,7 @@ function TeacherFrom() {
             />
 
             <Textarea
+              placeholderName="ex: ReactJs, React Native, Angular, NodeJs, Synfony, Laravel, MongoDB, Express, Postgres..."
               name="technologies"
               label="Technologies"
               value={technologies}
@@ -123,6 +127,7 @@ function TeacherFrom() {
               required
             />
             <Input
+              placeholderName="ex: 50"
               name="cost"
               label="Prix par heure"
               value={cost}

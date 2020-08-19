@@ -8,7 +8,7 @@ function Select({ label, name, options, classeWeekDay, ...rest }) {
       <label htmlFor={name}>{label}</label>
       <select value="" id={name} {...rest}>
         <option value="" disabled hidden>
-          Sélectionnez une option
+          Select options
         </option>
         {options.map(option => (
           <option key={option.value} value={option.value}>

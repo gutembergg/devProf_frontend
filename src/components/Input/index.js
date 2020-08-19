@@ -2,11 +2,11 @@ import React from 'react'
 
 import './styles.css'
 
-function Input({ label, name, ...rest }) {
+function Input({ label, name, placeholderName, ...rest }) {
   return (
     <div className="input_block">
       <label htmlFor={name}>{label}</label>
-      <input type="text" id={name} {...rest} />
+      <input type="text" id={name} {...rest} placeholder={`${placeholderName}`} />
     </div>
   )
 }

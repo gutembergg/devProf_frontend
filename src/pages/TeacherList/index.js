@@ -52,6 +52,7 @@ function TeacherList(props) {
                     { value: 'CMS', label: 'CMS' },
                     { value: 'HTML', label: 'HTML' }
                   ]}
+                  required
                 />
               </div>
 
@@ -71,6 +72,7 @@ function TeacherList(props) {
                     { value: '5', label: 'Vendredi' },
                     { value: '6', label: 'Samedi' }
                   ]}
+                  required
                 />
               </div>
 
@@ -81,6 +83,7 @@ function TeacherList(props) {
                   label="Horaire"
                   value={time}
                   onChange={e => setTime(e.target.value)}
+                  required
                 />
               </div>
 
