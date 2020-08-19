@@ -1,21 +1,24 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
 
 import whatsapIcon from '../../assets/images/icons/whatsapp.svg'
+import api from '../../services/api'
 
 import './styles.css'
 
-const TeacherItem = ({ teachers }) => {
+const TeacherItem = ({ teachers, language }) => {
+  function createNewConnection() {
+    api.post('/connections', {
+      user_id: teachers.id
+    })
+  }
+
   return (
     <article className="teacher-item">
       <header>
-        <img
-          src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcS1BsEAN0Vk6Nvt43U51iOjW3J-ACLVkveOxw&usqp=CAU"
-          alt=""
-        />
+        <img src={teachers.avatar} alt="" />
         <div>
           <strong>{teachers.name}</strong>
-          <span>teachers.languages</span>
+          <span>{language}</span>
         </div>
       </header>
       <p>{teachers.technologies}</p>
@@ -23,10 +26,10 @@ const TeacherItem = ({ teachers }) => {
         <p>
           Prix/heure<strong>{teachers.cost} fr</strong>
         </p>
-        <Link to="blank">
+        <a target="blank" onClick={createNewConnection} href={`https://wa.me/${teachers.whatsapp}`}>
           <img src={whatsapIcon} alt="whatsapp" />
           Contacter
-        </Link>
+        </a>
       </footer>
     </article>
   )

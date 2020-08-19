@@ -1,14 +1,23 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 
 import landingImg from '../../assets/images/landing.svg'
 import studyIcon from '../../assets/images/icons/study.svg'
 import giveClassesIcon from '../../assets/images/icons/give-classes.svg'
-//import purpleHeartIcon from '../../assets/images/icons/purple-heart.svg'
+import purpleHeartIcon from '../../assets/images/icons/purple-heart.svg'
+import api from '../../services/api'
 
 import './style.css'
 
 const HomeTest = () => {
+  const [connections, setConnections] = useState('')
+
+  useEffect(() => {
+    api.get('/connections').then(resp => {
+      const response = resp.data.total
+      setConnections(response)
+    })
+  }, [])
   return (
     <div id="container-home">
       <div className="d-flex justify-content-center">
@@ -41,9 +50,10 @@ const HomeTest = () => {
             </button>
           </Link>
         </div>
-      </div>
-      <div style={{ fontSize: '2rem' }} className="text-center text-white mr-5 mt-4">
-        Create account
+        <p style={{ fontSize: '2rem' }} id="total-connection" className="text-center mt-4">
+          Total de connexions {connections}
+          <img src={purpleHeartIcon} alt="purpleHeart"></img>
+        </p>
       </div>
     </div>
   )

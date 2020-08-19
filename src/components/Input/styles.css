@@ -1,5 +1,6 @@
 .input_block {
   position: relative;
+  margin: 0;
 }
 
 .input_block + .input_block {

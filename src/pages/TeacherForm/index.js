@@ -5,9 +5,10 @@ import Input from '../../components/Input'
 import Select from '../../components/Select'
 import Textarea from '../../components/Textarea'
 import WarningIcon from '../../assets/images/icons/warning.svg'
-import api from '../../services/api'
-
 import MultiSelect from 'react-multi-select-component'
+import InputTime from '../../components/InputTime'
+
+import api from '../../services/api'
 
 import './styles.css'
 
@@ -67,12 +68,9 @@ function TeacherFrom() {
         alert('Registed OK!!!!!!')
       })
       .catch(err => {
-        alert('Error register ')
-        console.log(err)
+        alert(err.response.data.error)
       })
   }
-
-  console.log(languages)
 
   return (
     <div id="page-teacher-form">
@@ -81,40 +79,55 @@ function TeacherFrom() {
         <form onSubmit={handleCreateClass}>
           <fieldset>
             <legend>Entrez vous données</legend>
-            <Input name="name" label="Name" value={name} onChange={e => setName(e.target.value)} />
+            <Input
+              name="name"
+              label="Name"
+              value={name}
+              onChange={e => setName(e.target.value)}
+              required
+            />
             <Input
               name="avatar"
               label="Avatar"
               value={avatar}
               onChange={e => setAvatar(e.target.value)}
+              required
             />
             <Input
               name="whatsapp"
               label="Whatsapp"
               value={whatsapp}
               onChange={e => setWhatsapp(e.target.value)}
+              required
             />
           </fieldset>
 
           <fieldset>
             <legend>Vous cours</legend>
+
+            <p>Languages</p>
             <MultiSelect
+              className="multiselect"
               options={options}
               value={languages}
               onChange={setLanguages}
-              labelledBy={'Select'}
+              labelledBy={'Sélectionnez'}
+              required
             />
+
             <Textarea
               name="technologies"
               label="Technologies"
               value={technologies}
               onChange={e => setTechnologies(e.target.value)}
+              required
             />
             <Input
               name="cost"
               label="Prix par heure"
               value={cost}
               onChange={e => setCost(e.target.value)}
+              required
             />
           </fieldset>
 
@@ -131,6 +144,8 @@ function TeacherFrom() {
               return (
                 <div key={index} className="schedule-item">
                   <Select
+                    classeWeekDay="select_block_teacher_form"
+                    className="schedule-champ"
                     name="week_day"
                     label="Jour de la semaine"
                     value={scheduleItem.week_day}
@@ -144,20 +159,23 @@ function TeacherFrom() {
                       { value: '5', label: 'Vendredi' },
                       { value: '6', label: 'Samedi' }
                     ]}
+                    required
                   />
-                  <Input
+                  <InputTime
                     name="from"
                     label="De"
                     type="time"
                     value={scheduleItem.from}
                     onChange={e => scheduleItemsValue(index, 'from', e.target.value)}
+                    required
                   />
-                  <Input
+                  <InputTime
                     name="to"
                     label="Jusqu'a"
                     type="time"
                     value={scheduleItem.to}
                     onChange={e => scheduleItemsValue(index, 'to', e.target.value)}
+                    required
                   />
                 </div>
               )

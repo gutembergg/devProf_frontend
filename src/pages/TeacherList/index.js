@@ -31,8 +31,6 @@ function TeacherList(props) {
     }
   }
 
-  console.log(week_day)
-
   return (
     <>
       <div id="page-teacher-list">
@@ -41,7 +39,8 @@ function TeacherList(props) {
             <div className="row">
               <div className="col-md-3">
                 <Select
-                  name="subject"
+                  classeWeekDay="select_block"
+                  name="languages"
                   label="Langages"
                   value={languages}
                   onChange={e => setLanguages(e.target.value)}
@@ -58,6 +57,7 @@ function TeacherList(props) {
 
               <div className="col-md-3">
                 <Select
+                  classeWeekDay="select_block"
                   name="week_day"
                   label="Jour de la semaine"
                   value={week_day}
@@ -98,7 +98,7 @@ function TeacherList(props) {
           searchTeachers.map(teacher => {
             return (
               <div key={teacher.id} className="d-flex justify-content-center">
-                <TeacherItem teachers={teacher} />
+                <TeacherItem language={languages} teachers={teacher} />
               </div>
             )
           })}

@@ -5,13 +5,13 @@
 
 #search-teacher {
   position: absolute;
-  margin-top: 2.5rem;
+  margin-top: 5.5rem;
   margin-bottom: 0;
 }
 
 #search-teacher label {
   font-size: 2rem;
-  color: var(--color-text-in-primary);
+  color: var(--color-text-complement);
 }
 
 #search-teacher button {
@@ -43,7 +43,13 @@
 
   #search-teacher {
     position: absolute;
-    bottom: -90px;
+    margin-top: 8.5rem;
+    bottom: -110px;
+  }
+
+  #search-teacher label {
+    font-size: 2rem;
+    color: var(--color-text-in-primary);
   }
 
   #search-teacher button {

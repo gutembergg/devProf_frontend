@@ -2,11 +2,14 @@ import React from 'react'
 
 import './styles.css'
 
-function Select({ label, name, options, ...rest }) {
+function Select({ label, name, options, classeWeekDay, ...rest }) {
   return (
-    <div className="select_block">
+    <div className={`${classeWeekDay}`}>
       <label htmlFor={name}>{label}</label>
-      <select id={name} {...rest}>
+      <select value="" id={name} {...rest}>
+        <option value="" disabled hidden>
+          Sélectionnez une option
+        </option>
         {options.map(option => (
           <option key={option.value} value={option.value}>
             {option.label}

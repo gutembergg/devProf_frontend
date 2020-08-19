@@ -38,12 +38,32 @@
   color: var(--color-text-complement);
 }
 
+.multiselect {
+  --rmsc-main: var(--color-primary-light);
+  --rmsc-hover: #f1f3f5;
+  --rmsc-selected: #e2e6ea;
+  --rmsc-border: var(--color-line-in-white);
+  --rmsc-gray: #aaa;
+  --rmsc-bg: var(--color-input-background);
+  --rmsc-p: 10px; /* Spacing */
+  --rmsc-radius: 8px; /* Radius */
+  --rmsc-h: 5.6rem; /* Height */
+  margin-bottom: 3rem;
+}
+
+#page-teacher-form main fieldset p {
+  font-size: 1.4rem;
+  color: var(--color-text-complement);
+}
+
 #page-teacher-form main fieldset .input_block + .textarea_block,
 #page-teacher-form main fieldset .select_block + .textarea_block,
 #page-teacher-form main fieldset .textarea_block + .input_block {
   margin-top: 2.4rem;
 }
-
+.schedule-champ {
+  margin-bottom: 2rem;
+}
 #page-teacher-form main fieldset legend button {
   border: 0;
   background: none;
@@ -96,6 +116,10 @@
   background: var(--color-secundary-dark);
 }
 
+.schedule-item {
+  margin-top: 2rem;
+}
+
 @media (min-width: 700px) {
   #page-teacher-form {
     max-width: 100vw;
@@ -125,5 +149,8 @@
   #page-teacher-form main footer button {
     width: 20rem;
     margin-top: 0;
+  }
+  .schedule-item {
+    margin-top: 0.5rem;
   }
 }
