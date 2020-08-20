@@ -96,7 +96,7 @@ function TeacherList(props) {
         <div style={{ marginTop: '10rem' }}></div>
       </div>
 
-      <div className="container">
+      <div>
         {searchTeachers &&
           searchTeachers.map(teacher => {
             return (
