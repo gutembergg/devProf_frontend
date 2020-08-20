@@ -120,6 +120,11 @@
   margin-top: 2rem;
 }
 
+#page-teacher-form main fieldset .closeIcon {
+  margin-top: 1rem;
+  cursor: pointer;
+}
+
 @media (min-width: 700px) {
   #page-teacher-form {
     max-width: 100vw;
@@ -152,5 +157,15 @@
   }
   .schedule-item {
     margin-top: 0.5rem;
+  }
+
+  #page-teacher-form main fieldset .closeIcon {
+    margin-top: -1rem;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+
+  #page-teacher-form main fieldset .closeIcon:hover {
+    color: black;
   }
 }

@@ -34,7 +34,7 @@ function TeacherList(props) {
   return (
     <>
       <div id="page-teacher-list">
-        <PageHeaders title="Voici les Devs disponibles.">
+        <PageHeaders textMargin="teacher-list" title="Voici les Devs disponibles.">
           <form onSubmit={searchTeacher} id="search-teacher">
             <div className="row">
               <div className="col-md-3">

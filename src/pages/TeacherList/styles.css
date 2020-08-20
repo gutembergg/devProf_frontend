@@ -27,11 +27,6 @@
   margin-bottom: 4rem;
 }
 
-/* #page-teacher-list main {
-  margin: 3.2rem auto;
-  width: 90%;
-} */
-
 @media (min-width: 700px) {
   #page-teacher-list {
     max-width: 100%;

@@ -4,7 +4,7 @@ import { useHistory } from 'react-router-dom'
 import { FiArrowLeft } from 'react-icons/fi'
 import './styles.css'
 
-function PageHeaders({ title, description, children }) {
+function PageHeaders({ title, description, textMargin, children }) {
   const history = useHistory()
 
   const goBack = () => {
@@ -24,7 +24,10 @@ function PageHeaders({ title, description, children }) {
         </div>
       </div>
       <div className="header-content">
-        <strong>{title}</strong>
+        <div className={`${textMargin}`}>
+          <strong>{title}</strong>
+        </div>
+
         {description && <p>{description}</p>}
 
         {children}

@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { useHistory } from 'react-router-dom'
 
 import PageHeaders from '../../components/PageHeaders'
 import Input from '../../components/Input'
@@ -13,6 +14,7 @@ import api from '../../services/api'
 import './styles.css'
 
 function TeacherFrom() {
+  const history = useHistory()
   const [name, setName] = useState('')
   const [avatar, setAvatar] = useState('')
   const [whatsapp, setWhatsapp] = useState('')
@@ -32,9 +34,9 @@ function TeacherFrom() {
   ]
 
   function handleLanguages() {
-    const lang = languages.map(({ value, label, ...rest }) => rest)
-    console.log(lang)
+    languages.map(({ value, label, ...rest }) => rest)
   }
+
   function scheduleItemsValue(position, field, value) {
     const updatedField = scheduleItems.map((scheduleItem, index) => {
       if (position === index) {
@@ -47,6 +49,11 @@ function TeacherFrom() {
 
   function addSchedule() {
     setScheduleItems([...scheduleItems, { week_day: 0, from: '', to: '' }])
+  }
+
+  function deleteSchedule(position) {
+    const scheduleDeleted = scheduleItems.filter((item, index) => index !== position)
+    setScheduleItems(scheduleDeleted)
   }
 
   async function handleCreateClass(e) {
@@ -66,6 +73,7 @@ function TeacherFrom() {
       })
       .then(response => {
         alert('Registed OK!!!!!!')
+        history.push('/study')
       })
       .catch(err => {
         alert(err.response.data.error)
@@ -74,13 +82,13 @@ function TeacherFrom() {
 
   return (
     <div id="page-teacher-form">
-      <PageHeaders title="Incroyable que vous voulez donner des cours." />
+      <PageHeaders textMargin="teacher-form" title="Incroyable que vous voulez donner des cours." />
       <main>
         <form onSubmit={handleCreateClass}>
           <fieldset>
             <legend>Entrez vous données</legend>
             <Input
-              placeholderName=""
+              placeholderName="ex: Ada Lovelace"
               name="name"
               label="Name"
               value={name}
@@ -147,41 +155,47 @@ function TeacherFrom() {
 
             {scheduleItems.map((scheduleItem, index) => {
               return (
-                <div key={index} className="schedule-item">
-                  <Select
-                    classeWeekDay="select_block_teacher_form"
-                    className="schedule-champ"
-                    name="week_day"
-                    label="Jour de la semaine"
-                    value={scheduleItem.week_day}
-                    onChange={e => scheduleItemsValue(index, 'week_day', e.target.value)}
-                    options={[
-                      { value: '0', label: 'Dimanche' },
-                      { value: '1', label: 'Lundi' },
-                      { value: '2', label: 'Mardi' },
-                      { value: '3', label: 'Mercredi' },
-                      { value: '4', label: 'Jeudi' },
-                      { value: '5', label: 'Vendredi' },
-                      { value: '6', label: 'Samedi' }
-                    ]}
-                    required
-                  />
-                  <InputTime
-                    name="from"
-                    label="De"
-                    type="time"
-                    value={scheduleItem.from}
-                    onChange={e => scheduleItemsValue(index, 'from', e.target.value)}
-                    required
-                  />
-                  <InputTime
-                    name="to"
-                    label="Jusqu'a"
-                    type="time"
-                    value={scheduleItem.to}
-                    onChange={e => scheduleItemsValue(index, 'to', e.target.value)}
-                    required
-                  />
+                <div key={index}>
+                  <div className="schedule-item">
+                    <Select
+                      classeWeekDay="select_block_teacher_form"
+                      className="schedule-champ"
+                      name="week_day"
+                      label="Jour de la semaine"
+                      value={scheduleItem.week_day}
+                      onChange={e => scheduleItemsValue(index, 'week_day', e.target.value)}
+                      options={[
+                        { value: '0', label: 'Dimanche' },
+                        { value: '1', label: 'Lundi' },
+                        { value: '2', label: 'Mardi' },
+                        { value: '3', label: 'Mercredi' },
+                        { value: '4', label: 'Jeudi' },
+                        { value: '5', label: 'Vendredi' },
+                        { value: '6', label: 'Samedi' }
+                      ]}
+                    />
+                    <InputTime
+                      name="from"
+                      label="De"
+                      type="time"
+                      value={scheduleItem.from}
+                      onChange={e => scheduleItemsValue(index, 'from', e.target.value)}
+                    />
+                    <InputTime
+                      name="to"
+                      label="Jusqu'a"
+                      type="time"
+                      value={scheduleItem.to}
+                      onChange={e => scheduleItemsValue(index, 'to', e.target.value)}
+                    />
+                  </div>
+                  <p
+                    style={{ display: 'flex', justifyContent: 'flex-end' }}
+                    className="closeIcon"
+                    onClick={() => deleteSchedule(index)}
+                  >
+                    X
+                  </p>
                 </div>
               )
             })}
