@@ -6,8 +6,8 @@
   margin-top: 1.4rem;
 }
 
-.select_block label {
-  font-size: 1.4rem;
+.select_block .labelName {
+  font-size: 10rem;
 }
 
 .select_block select {
@@ -44,7 +44,7 @@
   margin-top: 1.4rem;
 }
 
-.select_block_teacher_form label {
+.select_block_teacher_form .labelName {
   font-size: 1.4rem;
 }
 
