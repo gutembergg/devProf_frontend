@@ -145,13 +145,13 @@ function TeacherFrom() {
           </fieldset>
 
           <fieldset>
-            <legend>
-              Horaires disponible
-              <button type="button" onClick={addSchedule}>
+            <div className="d-flex justify-content-between align-items-center schedule-flex">
+              <p className="col-md-6">Horaires disponible</p>
+              <button className="col-md-4 mb-3" type="button" onClick={addSchedule}>
                 {' '}
                 + Nouveau horaire
               </button>
-            </legend>
+            </div>
 
             {scheduleItems.map((scheduleItem, index) => {
               return (
