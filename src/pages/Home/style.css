@@ -21,7 +21,7 @@
 }
 
 .buttons_container {
-  margin-left: 2rem;
+  margin-left: 1.8rem;
 }
 
 .buttons_container p {
@@ -30,7 +30,7 @@
   align-items: center;
 }
 
-.buttons_container p span {
+.buttons_container p {
   margin-bottom: 5rem;
 }
 
