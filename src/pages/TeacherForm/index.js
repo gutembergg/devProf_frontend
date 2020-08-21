@@ -118,7 +118,6 @@ function TeacherFrom() {
 
             <p>Languages</p>
             <MultiSelect
-              className="multiselect"
               options={options}
               value={languages}
               onChange={setLanguages}

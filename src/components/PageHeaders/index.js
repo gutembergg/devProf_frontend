@@ -16,7 +16,7 @@ function PageHeaders({ title, description, textMargin, children }) {
       <div className="row top-navbar d-flex justify-content-between align-items-center">
         <FiArrowLeft
           onClick={goBack}
-          style={{ marginLeft: '4rem', color: '#f0f0f7', cursor: 'pointer' }}
+          style={{ marginLeft: '2rem', color: '#f0f0f7', cursor: 'pointer' }}
           size="4rem"
         />
         <div className="text-white" style={{ marginRight: '4rem', fontSize: '3rem' }}>
