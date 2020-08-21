@@ -21,14 +21,14 @@
 }
 
 .buttons_container {
-  margin-left: 3rem;
-  margin-bottom: 10rem;
+  margin-left: 1.5rem;
 }
 
 .buttons_container p {
   margin: 0 auto;
   display: flex;
   align-items: center;
+  margin-bottom: 5rem;
 }
 
 #btnEtudier {
