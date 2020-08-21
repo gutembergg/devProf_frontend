@@ -21,7 +21,7 @@
 }
 
 .buttons_container {
-  margin-left: 5rem;
+  margin-left: 3rem;
   margin-bottom: 10rem;
 }
 
@@ -86,9 +86,9 @@
     margin-left: 1rem;
   }
 
-  .buttons_container p {
+  /*  .buttons_container p {
     margin-bottom: 0;
-  }
+  } */
 
   #btnEtudier {
     margin: 2rem;
