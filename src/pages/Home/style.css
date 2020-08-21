@@ -21,13 +21,16 @@
 }
 
 .buttons_container {
-  margin-left: 1.5rem;
+  margin-left: 2rem;
 }
 
 .buttons_container p {
   margin: 0 auto;
   display: flex;
   align-items: center;
+}
+
+.buttons_container p span {
   margin-bottom: 5rem;
 }
 
