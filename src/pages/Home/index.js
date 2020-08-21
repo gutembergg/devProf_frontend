@@ -51,7 +51,7 @@ const HomeTest = () => {
           </Link>
         </div>
         <p style={{ fontSize: '2rem' }} id="total-connection" className="text-center mt-4">
-          Total de connexions {connections}
+          <span style={{ marginRight: '1rem' }}>Total de connexions </span> {connections}
           <img src={purpleHeartIcon} alt="purpleHeart"></img>
         </p>
       </div>
