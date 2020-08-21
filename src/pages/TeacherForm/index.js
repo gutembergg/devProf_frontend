@@ -5,9 +5,9 @@ import PageHeaders from '../../components/PageHeaders'
 import Input from '../../components/Input'
 import Select from '../../components/Select'
 import Textarea from '../../components/Textarea'
-import WarningIcon from '../../assets/images/icons/warning.svg'
 import MultiSelect from 'react-multi-select-component'
 import InputTime from '../../components/InputTime'
+import { GiMedallist } from 'react-icons/gi'
 
 import api from '../../services/api'
 
@@ -202,9 +202,8 @@ function TeacherFrom() {
           </fieldset>
           <footer>
             <p>
-              <img src={WarningIcon} alt="warning" />
-              Important ! <br />
-              Remplissez tout les champs
+              <GiMedallist size="3rem" color="#8257e5" style={{ marginRight: '1.4rem' }} />
+              Merci pour votre participation !
             </p>
             <button type="submit">Valider</button>
           </footer>
