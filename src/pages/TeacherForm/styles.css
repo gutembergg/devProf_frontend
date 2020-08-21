@@ -1,6 +1,10 @@
 #page-teacher-form {
   width: 100vw;
   height: 100vh;
+  display: -webkit-box; /* OLD - iOS 6-, Safari 3.1-6, BB7 */
+  display: -ms-flexbox; /* TWEENER - IE 10 */
+  display: -webkit-flex; /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
+  display: flex;
 }
 
 #page-teacher-form main {
@@ -23,6 +27,12 @@
 }
 
 #page-teacher-form main fieldset legend {
+  -webkit-box-flex: 1; /* OLD - iOS 6-, Safari 3.1-6 */
+  width: 20%; /* For old syntax, otherwise collapses. */
+  -webkit-flex: 1; /* Safari 6.1+. iOS 7.1+, BB10 */
+  -ms-flex: 1; /* IE 10 */
+  flex: 1;
+
   font: 700 2.4rem Archivo;
   color: var(--color-text-title);
   margin-bottom: 2.4rem;
