@@ -21,13 +21,13 @@
 
 .buttons_container {
   margin-left: 1.8rem;
-  margin-bottom: 5rem;
 }
 
 .buttons_container p {
   margin: 0 auto;
   display: flex;
   align-items: center;
+  margin-bottom: 5rem;
 }
 
 #btnEtudier {
