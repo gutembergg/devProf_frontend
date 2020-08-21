@@ -39,16 +39,16 @@
 }
 
 .multi-select {
-  --rmsc-main: var(--color-primary-light);
-  --rmsc-hover: #f1f3f5;
-  --rmsc-selected: #e2e6ea;
-  --rmsc-border: var(--color-line-in-white);
-  --rmsc-gray: #aaa;
-  --rmsc-bg: var(--color-input-background);
-  --rmsc-p: 10px; /* Spacing */
-  --rmsc-radius: 8px; /* Radius */
-  --rmsc-h: 5.6rem; /* Height */
-  margin-bottom: 3rem;
+  --rmsc-main: var(--color-primary-light) !important;
+  --rmsc-hover: #f1f3f5 !important;
+  --rmsc-selected: #e2e6ea !important;
+  --rmsc-border: var(--color-line-in-white) !important;
+  --rmsc-gray: #aaa !important;
+  --rmsc-bg: var(--color-input-background) !important;
+  --rmsc-p: 10px !important; /* Spacing */
+  --rmsc-radius: 8px !important; /* Radius */
+  --rmsc-h: 5.6rem !important; /* Height */
+  margin-bottom: 3rem !important;
 }
 
 #page-teacher-form main fieldset p {
