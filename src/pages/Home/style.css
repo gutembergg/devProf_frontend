@@ -1,6 +1,11 @@
 #container-home {
   width: 100vw;
+  height: 100vh;
   background: var(--color-primary);
+}
+
+#container-home .top-img div {
+  margin-top: 4rem;
 }
 
 .title-dev {

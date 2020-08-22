@@ -21,7 +21,7 @@ const HomeTest = () => {
   return (
     <div id="container-home">
       <div className="d-flex justify-content-center">
-        <div className="row mt-5">
+        <div className="row mt-5 top-img">
           <div className="col-md-6 d-flex align-self-center">
             <div id="logo-container">
               <h1 className="title-dev">DevProf</h1>
