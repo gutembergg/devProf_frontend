@@ -4,10 +4,6 @@
   background: var(--color-primary);
 }
 
-#container-home .top-img div {
-  margin-top: 4rem;
-}
-
 .title-dev {
   font-size: 11.5vw;
   color: var(--color-title-in-primary);
@@ -79,6 +75,10 @@
 @media (min-width: 700px) {
   #container-home {
     height: 100vh;
+  }
+
+  #container-home .top-img div {
+    margin-top: 3rem;
   }
 
   .title-dev {
