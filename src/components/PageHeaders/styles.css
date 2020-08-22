@@ -63,7 +63,7 @@
 }
 
 @media (min-width: 1300px) {
-  .page-header .header-content strong {
-    margin-top: 50rem;
+  .page-header {
+    background: red;
   }
 }
