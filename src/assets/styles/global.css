@@ -30,9 +30,14 @@
 html,
 body,
 #root {
-  height: 100vh;
   width: 100vw;
   background: var(--color-background);
+}
+
+#root {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 body {

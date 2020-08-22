@@ -67,15 +67,4 @@
   #search-teacher button:hover {
     background: var(--color-secundary-dark);
   }
-  /* 
-  #search-teacher .input_block + .input_block,
-  #search-teacher .select_block + .select_block {
-    margin-top: 0;
-  } */
-
-  /*  #page-teacher-list main {
-    padding: 3.2rem 0;
-    max-width: 740px;
-    margin: auto;
-  } */
 }
