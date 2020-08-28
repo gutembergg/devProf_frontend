@@ -34,11 +34,11 @@ body,
   background: var(--color-background);
 }
 
-#root {
+/* #root {
   display: flex;
   align-items: center;
   justify-content: center;
-}
+} */
 
 body {
   margin: 0;

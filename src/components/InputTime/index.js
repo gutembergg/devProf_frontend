@@ -6,7 +6,7 @@ function InputTime({ label, name, ...rest }) {
   return (
     <div className="input_time_block">
       <label htmlFor={name}>{label}</label>
-      <input type="text" id={name} {...rest} />
+      <input type="time" id={name} {...rest} />
     </div>
   )
 }
