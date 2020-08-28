@@ -17,8 +17,13 @@ const Pagehedetest = ({ title, description, children }) => {
             DevProf
           </div>
         </div>
-        <div className="wrap-text">
-          <div className="d-flex align-self-center col-sm-6 col-md-6 title-text">{title}</div>
+        <div className="row d-flex justify-content-center">
+          <div className="d-flex justify-content-center align-self-center col-sm-6 col-md-3 title-text">
+            {title}
+          </div>
+          <div className="col-md-1"></div>
+          <div className="col-md-2"></div>
+          <div className="col-md-2"></div>
         </div>
       </div>
       {children}
