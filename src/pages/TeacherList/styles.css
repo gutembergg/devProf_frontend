@@ -1,70 +1,8 @@
-#page-teacher-list {
-  width: 100vw;
-  height: 100vh;
+.header-form label {
+  font-size: 1.5rem;
+  color: var(--color-text-in-primary);
 }
 
-#search-teacher {
-  position: absolute;
-  margin-top: 5.5rem;
-  margin-bottom: 0;
-}
-
-#search-teacher label {
-  font-size: 2rem;
-  color: var(--color-text-complement);
-}
-
-#search-teacher button {
-  width: 100%;
-  height: 5.6rem;
-  background: var(--color-secundary);
-  color: var(--color-button-text);
-  border: 0;
-  border-radius: 0.8rem;
-  cursor: pointer;
-  font: 700 1.6rem Archivo;
-  margin-top: 3rem;
-  margin-bottom: 4rem;
-}
-
-@media (min-width: 700px) {
-  #page-teacher-list {
-    max-width: 100%;
-  }
-  #page-teacher-list {
-    width: 100vw;
-    height: 60vh;
-  }
-
-  #search-teacher {
-    position: absolute;
-    margin-top: 8.5rem;
-    bottom: -110px;
-  }
-
-  #search-teacher label {
-    font-size: 1.5rem;
-    color: var(--color-text-in-primary);
-  }
-
-  #search-teacher button {
-    width: 100%;
-    height: 5.6rem;
-    background: var(--color-secundary);
-    color: var(--color-button-text);
-    border: 0;
-    border-radius: 0.8rem;
-    cursor: pointer;
-    font: 700 1.6rem Archivo;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-decoration: none;
-    transition: background-color 0.2s;
-    margin-top: 6.1rem;
-  }
-
-  #search-teacher button:hover {
-    background: var(--color-secundary-dark);
-  }
+.header-form .inputs {
+  background: var(--color-input-background);
 }

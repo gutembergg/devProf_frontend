@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-import Pagehedetest from '../../components/pagehedTest'
+import PageHeader from '../../components/PageHeader'
 import Select from '../../components/Select'
 import Input from '../../components/Input'
 import TeacherItem from '../../components/TeacherItem'
@@ -9,7 +9,7 @@ import api from '../../services/api'
 import './styles.css'
 
 function TeacherList(props) {
-  const [searchTeachers, setSearchTeachers] = useState()
+  const [searchTeachers, setSearchTeachers] = useState([])
   const [languages, setLanguages] = useState('')
   const [week_day, setWeek_day] = useState('')
   const [time, setTime] = useState('')
@@ -33,13 +33,77 @@ function TeacherList(props) {
 
   return (
     <>
+      {/*  <div id="page-teacher-list">
+        <PageHeaders textMargin="teacher-list" title="Voici les Devs disponibles.">
+          <form onSubmit={searchTeacher} id="search-teacher">
+            <div className="row">
+              <div className="col-md-3">
+                <Select
+                  classeWeekDay="select_block"
+                  name="languages"
+                  label="Langages"
+                  value={languages}
+                  onChange={e => setLanguages(e.target.value)}
+                  options={[
+                    { value: 'PHP', label: 'PHP' },
+                    { value: 'Java', label: 'Java' },
+                    { value: 'JavaScript', label: 'JavaScript' },
+                    { value: 'Python', label: 'Python' },
+                    { value: 'CMS', label: 'CMS' },
+                    { value: 'HTML', label: 'HTML' }
+                  ]}
+                  required
+                />
+              </div>
+
+              <div className="col-md-3">
+                <Select
+                  classeWeekDay="select_block"
+                  name="week_day"
+                  label="Jour de la semaine"
+                  value={week_day}
+                  onChange={e => setWeek_day(e.target.value)}
+                  options={[
+                    { value: '0', label: 'Dimanche' },
+                    { value: '1', label: 'Lundi' },
+                    { value: '2', label: 'Mardi' },
+                    { value: '3', label: 'Mercredi' },
+                    { value: '4', label: 'Jeudi' },
+                    { value: '5', label: 'Vendredi' },
+                    { value: '6', label: 'Samedi' }
+                  ]}
+                  required
+                />
+              </div>
+
+              <div className="col-md-3">
+                <Input
+                  type="time"
+                  name="time"
+                  label="Horaire"
+                  value={time}
+                  onChange={e => setTime(e.target.value)}
+                  required
+                />
+              </div>
+
+              <div className="col-md-3">
+                <button type="submit">Search</button>
+              </div>
+            </div>
+          </form>
+        </PageHeaders>
+        <div style={{ marginTop: '10rem' }}></div>
+      </div> */}
+
       <div>
-        <Pagehedetest title="Voici les Devs disponibles.">
+        <PageHeader title="Voici les Devs disponibles.">
           <form onSubmit={searchTeacher}>
             <div className="row header-form d-flex justify-content-center">
               <div className="col-sm-12 col-md-2">
                 <Select
                   classeWeekDay="select_block"
+                  className="inputs"
                   name="languages"
                   label="Langages"
                   value={languages}
@@ -57,6 +121,7 @@ function TeacherList(props) {
               <div className="col-sm-12 col-md-2">
                 <Select
                   classeWeekDay="select_block"
+                  className="inputs"
                   name="week_day"
                   label="Jour"
                   value={week_day}
@@ -74,6 +139,7 @@ function TeacherList(props) {
               </div>
               <div className="col-sm-12 col-md-2">
                 <Input
+                  className="inputs"
                   type="time"
                   name="time"
                   label="Horaire"
@@ -88,7 +154,7 @@ function TeacherList(props) {
               </div>
             </div>
           </form>
-        </Pagehedetest>
+        </PageHeader>
       </div>
 
       <div>

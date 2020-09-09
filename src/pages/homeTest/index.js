@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import Pagehedetest from '../../components/pagehedTest'
+import Pagehedetest from '../../components/PageHeader'
 
 import Select from '../../components/Select'
 import Input from '../../components/Input'

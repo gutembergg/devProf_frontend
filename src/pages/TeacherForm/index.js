@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { useHistory } from 'react-router-dom'
 
-import PageHeaders from '../../components/PageHeaders'
+import PageHeaders from '../../components/PageHeader'
 import Input from '../../components/Input'
 import Select from '../../components/Select'
 import Textarea from '../../components/Textarea'
