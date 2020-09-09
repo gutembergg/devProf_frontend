@@ -9,7 +9,7 @@ function Select({ label, name, options, classeWeekDay, ...rest }) {
       <label className="labelName" htmlFor={name}>
         {label}
       </label>
-      <select defaultValue="" id={name} {...rest}>
+      <select value="" id={name} {...rest}>
         <option value="" disabled hidden>
           Select options
         </option>

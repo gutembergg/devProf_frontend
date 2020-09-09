@@ -9,7 +9,7 @@ import giveClassesIcon from '../../assets/images/icons/give-classes.svg'
 const HomeTest2 = () => {
   return (
     <div className="home">
-      <div>
+      <div className="home-block mt-5">
         <div className="row">
           <div className="col-sm-12 col-md-6 align-self-center">
             {' '}

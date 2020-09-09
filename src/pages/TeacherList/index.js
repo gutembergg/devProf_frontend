@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-import PageHeaders from '../../components/PageHeaders'
+import Pagehedetest from '../../components/pagehedTest'
 import Select from '../../components/Select'
 import Input from '../../components/Input'
 import TeacherItem from '../../components/TeacherItem'
@@ -33,11 +33,11 @@ function TeacherList(props) {
 
   return (
     <>
-      <div id="page-teacher-list">
-        <PageHeaders textMargin="teacher-list" title="Voici les Devs disponibles.">
-          <form onSubmit={searchTeacher} id="search-teacher">
-            <div className="row">
-              <div className="col-md-3">
+      <div>
+        <Pagehedetest title="Voici les Devs disponibles.">
+          <form onSubmit={searchTeacher}>
+            <div className="row header-form d-flex justify-content-center">
+              <div className="col-sm-12 col-md-2">
                 <Select
                   classeWeekDay="select_block"
                   name="languages"
@@ -52,15 +52,13 @@ function TeacherList(props) {
                     { value: 'CMS', label: 'CMS' },
                     { value: 'HTML', label: 'HTML' }
                   ]}
-                  required
                 />
               </div>
-
-              <div className="col-md-3">
+              <div className="col-sm-12 col-md-2">
                 <Select
                   classeWeekDay="select_block"
                   name="week_day"
-                  label="Jour de la semaine"
+                  label="Jour"
                   value={week_day}
                   onChange={e => setWeek_day(e.target.value)}
                   options={[
@@ -72,28 +70,25 @@ function TeacherList(props) {
                     { value: '5', label: 'Vendredi' },
                     { value: '6', label: 'Samedi' }
                   ]}
-                  required
                 />
               </div>
-
-              <div className="col-md-3">
+              <div className="col-sm-12 col-md-2">
                 <Input
                   type="time"
                   name="time"
                   label="Horaire"
                   value={time}
                   onChange={e => setTime(e.target.value)}
-                  required
                 />
               </div>
-
-              <div className="col-md-3">
-                <button type="submit">Search</button>
+              <div className="col-sm-12 col-md-2">
+                <button type="submit" className="btn btn-success">
+                  Search
+                </button>
               </div>
             </div>
           </form>
-        </PageHeaders>
-        <div style={{ marginTop: '10rem' }}></div>
+        </Pagehedetest>
       </div>
 
       <div>
