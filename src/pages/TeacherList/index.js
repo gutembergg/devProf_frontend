@@ -18,7 +18,7 @@ function TeacherList(props) {
 
   async function searchTeacher(e) {
     e.preventDefault()
-
+    setIsLoading(true)
     try {
       const response = await api.get('/users', {
         params: {
@@ -27,7 +27,7 @@ function TeacherList(props) {
           time
         }
       })
-      setIsLoading(true)
+
       setSearchTeachers(response.data)
       setIsLoading(false)
     } catch (error) {
