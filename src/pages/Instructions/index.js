@@ -9,7 +9,7 @@ import './styles.css'
 const Instructions = () => {
   return (
     <div>
-      <PageHeader title="Instrutions et suggéstions" />
+      <PageHeader title="Instrutions et suggéstions" titleMargin="instructions" />
       <div className="d-flex justify-content-center">
         <div id="container" className="card">
           <div className="instructions">

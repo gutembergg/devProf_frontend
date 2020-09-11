@@ -56,6 +56,16 @@
     color: var(--color-title-in-primary);
   }
 
+  .page-header .instructions {
+    max-width: 350px;
+    margin-top: 5rem;
+    margin-left: 11rem;
+    display: flex;
+    font: 700 3.6rem Archivo;
+    line-height: 4.2rem;
+    color: var(--color-title-in-primary);
+  }
+
   .header-form {
     margin-top: -6rem;
   }
