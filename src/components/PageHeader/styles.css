@@ -6,7 +6,7 @@
 .page-header .title-text {
   max-width: 350px;
   margin-top: 5rem;
-  margin-left: 2rem;
+  margin-left: 1rem;
   font: 700 3.6rem Archivo;
   line-height: 4.2rem;
   color: var(--color-title-in-primary);
@@ -36,9 +36,20 @@
 }
 
 @media (min-width: 700px) {
-  .page-header .title-text {
+  .page-header .form {
     max-width: 350px;
     margin-top: 5rem;
+    margin-left: 11rem;
+    display: flex;
+    font: 700 3.6rem Archivo;
+    line-height: 4.2rem;
+    color: var(--color-title-in-primary);
+  }
+
+  .page-header .list {
+    max-width: 350px;
+    margin-top: 5rem;
+    margin-left: 1.5rem;
     display: flex;
     font: 700 3.6rem Archivo;
     line-height: 4.2rem;

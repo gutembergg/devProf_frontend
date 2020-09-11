@@ -82,7 +82,11 @@ function TeacherFrom() {
 
   return (
     <div id="page-teacher-form">
-      <PageHeaders textMargin="teacher-form" title="Incroyable que vous voulez donner des cours." />
+      <PageHeaders
+        titleMargin="form"
+        textMargin="teacher-form"
+        title="Incroyable que vous voulez donner des cours."
+      />
       <main>
         <form onSubmit={handleCreateClass}>
           <fieldset>

@@ -7,7 +7,7 @@ import giveClassesIcon from '../../assets/images/icons/give-classes.svg'
 
 import './style.css'
 
-const HomeTest = () => {
+const Home = () => {
   return (
     <div className="home">
       <div className="home-block mt-5">
@@ -37,8 +37,8 @@ const HomeTest = () => {
               </button>
             </Link>
           </div>
-          <p id="instrutions" className="d-flex align-self-center">
-            Comment ça marche ?
+          <p id="instrutions" style={{ color: '#FFF' }} className="d-flex align-self-center link">
+            <Link to="/instructions">Comment ça marche ?</Link>
           </p>
         </div>
       </div>
@@ -46,4 +46,4 @@ const HomeTest = () => {
   )
 }
 
-export default HomeTest
+export default Home

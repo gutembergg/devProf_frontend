@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 
 import './styles.css'
 
-const Pagehedetest = ({ title, description, children }) => {
+const Pagehedetest = ({ title, description, children, titleMargin }) => {
   return (
     <>
       <div className="page-header">
@@ -22,7 +22,9 @@ const Pagehedetest = ({ title, description, children }) => {
           </div>
         </div>
         <div className="row d-flex justify-content-center">
-          <div className="d-flex justify-content-center align-self-center col-sm-6 col-md-3 title-text">
+          <div
+            className={`d-flex justify-content-center align-self-center col-sm-6 col-md-3 title-text ${titleMargin}`}
+          >
             {title}
           </div>
           <div className="col-md-1"></div>
