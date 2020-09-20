@@ -13,7 +13,7 @@ const TeacherItem = ({ teachers, language }) => {
   }
 
   return (
-    <article className="teacher-item">
+    <article className="teacher-item mb-5">
       <header>
         <img src={teachers.avatar} alt="" />
         <div>
