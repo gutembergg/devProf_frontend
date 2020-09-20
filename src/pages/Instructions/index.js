@@ -33,7 +33,7 @@ const Instructions = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  https://www.whatsapp.com/
+                  www.whatsapp.com
                 </a>{' '}
                 installée et vour pourrait envoyer un message a le developpeur qui vous avez
                 choisit.
@@ -78,14 +78,14 @@ const Instructions = () => {
                     <strong>
                       <i>- Prix:</i>
                     </strong>{' '}
-                    Entrez le prix convenable pour vous
+                    Entrez le prix convenable pour vous, vous êtes libres de négocier.
                   </li>
                   <li>
                     {' '}
                     <strong>
                       <i>- Horaires:</i>
                     </strong>{' '}
-                    Choisissez les jours que vous êtes disponible ansi que l'horaire, vous pouvez
+                    Choisissez les jours que vous êtes disponible ansi que l'horaire. Vous pouvez
                     choisir un horaire par jour.
                   </li>
                 </ul>
