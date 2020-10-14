@@ -16,7 +16,8 @@ import './styles.css'
 function TeacherFrom() {
   const history = useHistory()
   const [name, setName] = useState('')
-  const [avatar, setAvatar] = useState('')
+  const [avatar2, setAvatar2] = useState([])
+
   const [whatsapp, setWhatsapp] = useState('')
   const [technologies, setTechnologies] = useState('')
   const [cost, setCost] = useState('')
@@ -59,25 +60,35 @@ function TeacherFrom() {
   async function handleCreateClass(e) {
     e.preventDefault()
 
+    ///////////////////////////////////////////////////////////////////
+
+    const formData = new FormData()
+    formData.append('file', avatar2)
+    formData.append('name', name)
+    formData.append('whatsapp', whatsapp)
+    formData.append('languages', JSON.stringify(languages))
+    formData.append('technologies', technologies)
+    formData.append('cost', Number(cost))
+    formData.append('schedule', JSON.stringify(scheduleItems))
+
+    ///////////////////////////////////////////////////////////////////
+
     handleLanguages()
 
     await api
-      .post('/users', {
-        name,
-        avatar,
-        whatsapp,
-        languages,
-        technologies,
-        cost: Number(cost),
-        schedule: scheduleItems
-      })
+      .post('/users', formData)
       .then(response => {
-        alert('Registed OK!!!!!!')
+        alert('Registed!')
         history.push('/study')
       })
       .catch(err => {
         alert(err.response.data.error)
       })
+  }
+
+  function handleFile(e) {
+    const selectedFile = e.target.files[0]
+    setAvatar2(selectedFile)
   }
 
   return (
@@ -90,7 +101,8 @@ function TeacherFrom() {
       <main>
         <form onSubmit={handleCreateClass}>
           <fieldset>
-            <legend>Entrez vous données</legend>
+            <legend>Entrez vos données</legend>
+
             <Input
               placeholderName="ex: Ada Lovelace"
               name="name"
@@ -99,14 +111,7 @@ function TeacherFrom() {
               onChange={e => setName(e.target.value)}
               required
             />
-            <Input
-              placeholderName="ex: https://avatars3.githubusercontent.com/u/46713843..."
-              name="avatar"
-              label="Avatar"
-              value={avatar}
-              onChange={e => setAvatar(e.target.value)}
-              required
-            />
+
             <Input
               placeholderName="ex: 41712345678"
               name="whatsapp"
@@ -115,10 +120,13 @@ function TeacherFrom() {
               onChange={e => setWhatsapp(e.target.value)}
               required
             />
+
+            <label style={{ marginRight: '1rem', fontSize: '1.4rem' }}>Avatar</label>
+            <input className="inputfile" type="file" name="file" onChange={handleFile} required />
           </fieldset>
 
           <fieldset>
-            <legend>Vous cours</legend>
+            <legend>Vos cours</legend>
 
             <p>Languages</p>
             <MultiSelect

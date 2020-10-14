@@ -19,14 +19,12 @@ const Instructions = () => {
             </h2>
             <div className="text-etudiant">
               <p>
-                Recherchez la language, le jour et l'horaire qui vous voulez avoir votre cours et
-                trouvez les Devellopeurs disponibles avec les paràmetres de votre recherche. Faites
-                combien des recherche vous voulez.
-              </p>
-              <p>
-                Après trouvait le developpeur qui vous intéresse cliquez sur le botton contacter
-                pour envoyer un message par Whatsapp. Si vous utilisez votre desktop vous devez
-                avoir l'application Whatsapp
+                Recherchez le langage, le jour et l'horaire quand vous voulez avoir votre cours et
+                trouvez les Développeurs disponibles avec les paramètres de votre recherche. Faites
+                autant de recherches que vous voulez. Ensuite vous n'avez plus qu'à trouvez le
+                développeur qui vous intéresse, cliquez sur contacter pour lui envoyer un message
+                par Whatsapp. Si vous utilisez votre desktop, l'application Whatsapp pour le web
+                doit être installée.{' '}
                 <a
                   className="ml-2"
                   href="https://www.whatsapp.com/"
@@ -35,8 +33,6 @@ const Instructions = () => {
                 >
                   www.whatsapp.com
                 </a>{' '}
-                installée et vour pourrait envoyer un message a le developpeur qui vous avez
-                choisit.
               </p>
             </div>
             <div>
@@ -49,9 +45,9 @@ const Instructions = () => {
                   <i>Données personnelles</i>
                 </h4>
                 <p>
-                  Remplissez le formulaire d'inscription avec votre prenom, avatar( Suggestion: Vouz
-                  pouvez ajouter le lien de votre avatar Github ), whatsapp avec le même format
-                  suggéré par les champs du formulaire.
+                  Remplissez le formulaire d'inscription avec votre prénom, avatar (téléchargez
+                  votre image/photo), whatsapp (entrez votre numéro de téléphone avec le même format
+                  indiqué dans le formulaire.
                 </p>
 
                 <h4 className="mt-4 mb-3">
@@ -64,14 +60,14 @@ const Instructions = () => {
                     <strong>
                       <i>- Languages:</i>
                     </strong>{' '}
-                    Entrez les languages de programations qui vous souhaitez enseigner.
+                    Entrez les langages de programmations qui vous souhaitez enseigner.
                   </li>
                   <li>
                     <strong>
                       <i>- Technologies:</i>
                     </strong>{' '}
-                    Une bréve description de toutes les competences que vous avez dans les languages
-                    de programmations choisis, ex: framework, plataformes, logiciels et approches.{' '}
+                    Une brève description de toutes les compétences que vous avez dans les langages
+                    de programmations choisis, ex: framework, plates-formes, logiciels et approches.{' '}
                   </li>
                   <li>
                     {' '}
@@ -85,7 +81,7 @@ const Instructions = () => {
                     <strong>
                       <i>- Horaires:</i>
                     </strong>{' '}
-                    Choisissez les jours que vous êtes disponible ansi que l'horaire. Vous pouvez
+                    Choisissez les jours où vous êtes disponible ainsi que l'horaire, vous pouvez
                     choisir un horaire par jour.
                   </li>
                 </ul>
@@ -97,7 +93,7 @@ const Instructions = () => {
                 </h2>
 
                 <p>
-                  Pour les cours online vous pouvez utliser VScode avec l'extension Live Share pour
+                  Pour les cours online vous pouvez utiliser VScode avec l'extension Live Share pour
                   les partages d'écran et audio.
                 </p>
                 <div id="vscode-logo" className="mt-5">
@@ -106,6 +102,10 @@ const Instructions = () => {
                 <div id="liveshare" className="mt-5">
                   <img src={liveShare} alt="liveshare" />
                 </div>
+                <div className="text-center mt-5">
+                  <strong>Administration</strong>
+                </div>
+                <div className="text-center">gmascarenhas3001@gmail.com</div>
               </div>
             </div>
           </div>

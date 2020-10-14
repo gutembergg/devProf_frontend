@@ -33,7 +33,7 @@ const Home = () => {
             <Link to="/give-classes">
               <button id="btnDonner" type="button">
                 <img className="mr-3" src={giveClassesIcon} alt="give-classes icon" />
-                Donner cours
+                Enseigner
               </button>
             </Link>
           </div>
