@@ -59,13 +59,13 @@ const Instructions = () => {
                   <li>
                     <strong>
                       <i>- Languages:</i>
-                    </strong>{' '}
+                    </strong>{' '}<br/>
                     Entrez les langages de programmations qui vous souhaitez enseigner.
                   </li>
                   <li>
                     <strong>
                       <i>- Technologies:</i>
-                    </strong>{' '}
+                    </strong>{' '}<br/>
                     Une brève description de toutes les compétences que vous avez dans les langages
                     de programmations choisis, ex: framework, plates-formes, logiciels et approches.{' '}
                   </li>
@@ -73,14 +73,14 @@ const Instructions = () => {
                     {' '}
                     <strong>
                       <i>- Prix:</i>
-                    </strong>{' '}
+                    </strong>{' '}<br/>
                     Entrez le prix convenable pour vous, vous êtes libres de négocier.
                   </li>
                   <li>
                     {' '}
                     <strong>
                       <i>- Horaires:</i>
-                    </strong>{' '}
+                    </strong>{' '}<br/>
                     Choisissez les jours où vous êtes disponible ainsi que l'horaire, vous pouvez
                     choisir un horaire par jour.
                   </li>

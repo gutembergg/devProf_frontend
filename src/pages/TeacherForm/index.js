@@ -8,6 +8,7 @@ import Textarea from '../../components/Textarea'
 import MultiSelect from 'react-multi-select-component'
 import InputTime from '../../components/InputTime'
 import { GiMedallist } from 'react-icons/gi'
+import { store } from 'react-notifications-component';
 
 import api from '../../services/api'
 
@@ -78,11 +79,33 @@ function TeacherFrom() {
     await api
       .post('/users', formData)
       .then(response => {
-        alert('Registed!')
+        store.addNotification({
+          title: "Registré",
+          message: "Vous êtes enregistré avec succès",
+          type: "success",
+          insert: "top",
+          container: "top-right",
+          animationIn: ["animate__animated", "animate__fadeIn"],
+          animationOut: ["animate__animated", "animate__fadeOut"],
+          dismiss: {
+            duration: 2000
+          }
+        });
         history.push('/study')
       })
       .catch(err => {
-        alert(err.response.data.error)
+        store.addNotification({
+          title: "Erreur",
+          message: "Erreur de l'enregistrement",
+          type: "danger",
+          insert: "top",
+          container: "top-right",
+          animationIn: ["animate__animated", "animate__fadeIn"],
+          animationOut: ["animate__animated", "animate__fadeOut"],
+          dismiss: {
+            duration: 2000
+          }
+        });
       })
   }
 
